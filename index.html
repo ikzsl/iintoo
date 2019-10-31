@@ -28,7 +28,7 @@ c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C10
     <div class="main__background"></div>
     <div class="main__content">
       <h1 class="main__headline">Get iintoo it today</h1>
-      <h2 class="main__desc">There is no charge or obligation upon registration</h2>
+      <p class="main__desc">There is no charge or obligation upon registration</p>
       <ul class="main__social social">
         <li class="social__item">
           <a href="https://www.facebook.com" class="social__link social__link--fb">
@@ -48,17 +48,23 @@ c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C10
       </ul>
       <p class="main__separator">OR</p>
 
-      
-      <form class="main__form" action="https://echo.htmlacademy.ru" method="POST">
-        <fieldset class="main-contacts">
-          <input class="main__email" type="email" placeholder="Email" name="email">
-          <input class="main__phone" type="tel" placeholder="Phone" name="phone">
-        </fieldset>
 
+      <form class="main__form" action="https://echo.htmlacademy.ru" method="POST">
+
+        <div class="main-contacts">
+          <div class="main-contacts-item">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required="">
+          </div>
+          <div class="main-contacts-item">
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" required="">
+          </div>
+        </div>
 
         <ul class="main__list-of-types">
           <li>
-            <input type="radio" name="investor" id="individual" value="individual">
+            <input type="radio" name="investor" id="individual" value="individual" checked="">
             <label for="individual" class="main__radio-label">Individual</label>
           </li>
           <li>
@@ -75,14 +81,17 @@ c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C10
           </li>
         </ul>
 
+        <textarea class="main__textarea" readonly="" rows="3" name="text-discount">
+I am a natural person investing on my own behalf as a sole owner, jointtenant, or tenant in common.
+        </textarea>
 
+        <div class="main__agree">
+          <input type="checkbox" name="agree" id="agree">
+          <label for="agree" class="main__checkbox-label">I agree to the terms and receiving notifications from iintoo
+            <a href="iintoo.com" class="main__link">View full terms</a>
+        </label></div>
 
-
-        <textarea class="main__textarea" readonly="" rows="5" name="text-discount">I am a natural person investing on my own behalf as a sole owner, jointtenant, or tenant in common.</textarea>
-        <input type="checkbox" name="agree" id="agree">
-        <label for="agree" class="main__checkbox-label">I agree to the terms and receiving notifications from iintoo
-          <a href="iintoo.com" class="main__link">View full terms</a>
-        </label>
+        
         <input class="main__button" type="submit" value="Create Account">
       </form>
     </div>
