@@ -187,6 +187,7 @@ template {
 }
 .main__desc {
   font-size: 20px;
+  font-weight: 400;
   margin: 0 0 80px;
   color: #7b8a92;
 }
@@ -207,7 +208,7 @@ template {
   width: 100px;
   height: 1px;
   top: 7px;
-  background-color: #afafaf;
+  background-color: #eee;
 }
 .main__separator::before {
   left: -110px;
@@ -248,8 +249,7 @@ template {
   padding: 5px;
   color: #96a5b1;
 }
-.main-contacts,
-.main__list-of-types {
+.main-contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,9 +259,57 @@ template {
   padding: 0;
   margin: 0;
 }
-.main__list-of-types {
-  list-style: none;
+.main__types-fieldset {
+  padding: 50px 0 0;
   margin: 0 0 25px;
+  border: 0;
+}
+.main__list-of-types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+.main__list-of-types label {
+  position: relative;
+}
+.main__list-of-types label:hover::before {
+  -webkit-box-shadow: 0 0 1px 1px #7b8a92;
+  box-shadow: 0 0 1px 1px #7b8a92;
+}
+.main__list-of-types label:focus::before {
+  -webkit-box-shadow: 0 0 1px 1px #7b8a92;
+  box-shadow: 0 0 1px 1px #7b8a92;
+}
+.main__list-of-types label span {
+  color: #96a5b1;
+}
+.main__list-of-types input:checked ~ label::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: -20px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 4px #3698fb;
+  box-shadow: 0 0 0 4px #3698fb;
+}
+.main__list-of-types label::before {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  top: 5px;
+  left: -20px;
+  -webkit-box-shadow: 0 0 1px 1px #96a5b1;
+  box-shadow: 0 0 1px 1px #96a5b1;
+  border-radius: 50%;
 }
 .main__textarea {
   max-width: 45%;
@@ -275,6 +323,7 @@ template {
   resize: none;
   -webkit-box-shadow: 0 5px 10px -5px #96a5b1;
   box-shadow: 0 5px 10px -5px #96a5b1;
+  background-color: #eff6ff;
 }
 .main__agree {
   margin: 0 0 60px;
